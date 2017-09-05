@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Animated Icon</title>
+  <style>
+    #beer,#arrow,#hourGlass{
+      font-size: 50px;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  <div id="beer" class="fa">
+  </div>
+  <br>
+  <div id="arrow" class="fa">
+  </div>
+  <br>
+  <div id="hourGlass" class="fa">
+  </div>
+  <script>
+    //beer to sleep animation
+    function sleep(){
+    var beer = document.getElementById('beer');
+    beer.innerHTML = "&#xf0fc;";
+    setTimeout(function(){
+      beer.innerHTML="&#xf236;"
+    },1000)
+    }
+    //call animation
+    sleep();
+    //do the animation every 2 secs
+    setInterval(sleep,2000);
+
+
+    //arrow animation
+    function arrow()
+    {
+      var arrowStart = document.getElementById('arrow');
+      arrowStart.innerHTML = "&#xf152;";
+      setTimeout(function(){
+        arrowStart.innerHTML = "&#xf151;";
+      },1000)
+      setTimeout(function(){
+        arrowStart.innerHTML = "&#xf150;";
+      },2000)
+      setTimeout(function(){
+        arrowStart.innerHTML = "&#xf191;";
+      },3000)
+    }
+  arrow();
+  //run animation
+  setInterval(arrow,4000);
+
+
+  function hourGlass()
+  {
+    var hourGlass = document.getElementById('hourGlass');
+    hourGlass.innerHTML = "&#xf251;";
+    setTimeout(function(){
+      hourGlass.innerHTML = "&#xf252;";
+    },1000)
+    setTimeout(function(){
+      hourGlass.innerHTML = "&#xf253;";
+    },2000)
+  }
+  hourGlass();
+  setInterval(hourGlass,3000);
+
+  </script>
+
+
+
+
+
+</body>
+</html>
